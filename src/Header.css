@@ -28,14 +28,16 @@
   border: none;
   width: 100%;
   border-radius: 0.3rem 0 0 0.3rem;
+  outline: none;
 }
 
 .header__searchIcon {
   padding: 0.2rem;
   height: 2.3rem !important;
   width: 2.5rem !important;
-  background-color: #cd9042;
+  background-color: #e4a451;
   border-radius: 0 0.3rem 0.3rem 0;
+  color: rgb(44, 44, 44);
 }
 
 .header__nav {
