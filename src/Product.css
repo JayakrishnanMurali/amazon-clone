@@ -32,7 +32,7 @@
 
 .product__cartBtn:hover {
   background-color: #bd8844;
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .product__info {
