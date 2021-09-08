@@ -2,16 +2,34 @@
   width: 100%;
   margin-bottom: 1rem;
 }
+.checkout__mainDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  margin: 0 2rem;
+}
+.checkout__price {
+  color: rgb(78, 78, 78);
+  margin-top: 2.5rem;
+  font-size: 0.918rem;
+}
 
 .checkout {
   display: flex;
   padding: 2rem;
-  background-color: white;
   height: max-content;
 }
 
 .checkout__title {
   margin-right: 1rem;
   padding: 1rem;
-  border-bottom: 1px solid lightgray;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.checkout__left {
+  background-color: white;
+  margin-right: 2rem;
+  /* height: 10rem; */
 }

@@ -1,7 +1,28 @@
 import React from 'react'
 import './Product.css'
+import { useStateValue } from './StateProvider'
 
 function Product({id,title,image,price,rating }) {
+
+    const [{ cart }, dispatch] = useStateValue();
+
+    const addToCart = () => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+            },
+        })
+    }
+
+    function numberWithCommas (x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
     return (
         <div className="product">
 
@@ -21,11 +42,15 @@ function Product({id,title,image,price,rating }) {
 
                 <p className="product__price">
                     <small>₹</small>
-                    <strong>{price}</strong>
+                    <strong>{numberWithCommas(price)}</strong>
                 </p>
             </div>
 
-            <button className="product__cartBtn" >Add to Cart</button>
+            <button 
+            onClick={addToCart}
+            className="product__cartBtn" >
+                Add to Cart
+            </button>
         
         </div>
     )
