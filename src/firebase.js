@@ -1,4 +1,5 @@
-import firebase from "firebase"
+// import * as check from "firebase/firestore"
+import firebase from "firebase/compat"
 
 
 const firebaseConfig = {
